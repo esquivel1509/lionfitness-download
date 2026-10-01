@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Descarga Lion Fitness</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .container {
+      padding: 30px;
+      max-width: 500px;
+    }
+
+    h1 {
+      color: #2FFF00;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ddd;
+      font-size: 18px;
+    }
+
+    .button {
+      display: block;
+      padding: 16px 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 17px;
+    }
+
+    .android {
+      background: #2FFF00;
+      color: #111;
+    }
+
+    .apple {
+      background: white;
+      color: #111;
+    }
+
+    .nexora {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>LION FITNESS</h1>
+
+    <p>Descarga nuestra app</p>
+
+    <a class="button android"
+       href="https://play.google.com/store/apps/details?id=com.nexora.lionfitness">
+       Descargar en Google Play
+    </a>
+
+    <a class="button apple"
+       href="https://apps.apple.com/mx/app/lion-fitness/id6761346069">
+       Descargar en App Store
+    </a>
+
+    <div class="nexora">
+      by Nexora
+    </div>
+
+  </div>
+
+  <script>
+
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    const googlePlay =
+      "https://play.google.com/store/apps/details?id=com.nexora.lionfitness";
+
+    const appStore =
+      "https://apps.apple.com/mx/app/lion-fitness/id6761346069";
+
+    // Android
+    if (/android/i.test(userAgent)) {
+      window.location.replace(googlePlay);
+    }
+
+    // iPhone, iPad o iPod
+    else if (/iPad|iPhone|iPod/.test(userAgent)) {
+      window.location.replace(appStore);
+    }
+
+  </script>
+
+</body>
+</html>
